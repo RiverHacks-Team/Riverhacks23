@@ -31,16 +31,16 @@ const LandingPage = ({ setUser }) => {
   return (
     <div>
       <header>
-        <title>Your Page Title</title>
+        <title>mindfulU</title>
 
         <img
           src={logo}
           alt='a gorgeous logo'
-          style={{ width: "200px", height: "auto" }}
+          style={{ width: "200px", height: "auto", margin: "10px", marginBottom: '30px' }}
         />
       </header>
       <div>
-        <div>Welcome! Ready to feel good?</div>
+        <div> Taking care of yourself is an essential part of your college experience, and we're here to support you every step of the way!</div>
         <button
           onClick={handleLoginSignupButtonClick}
           className='landingPageButton'
