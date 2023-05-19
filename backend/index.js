@@ -3,12 +3,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 
-module.exports = session({
-  secret: "keyboardcat",
-  saveUninitialized: true,
-  cookie: { maxAge: null },
-  resave: false 
-})
 // Create Express app
 const app = express();
 
@@ -16,12 +10,16 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-
+// Session
+app.use(session({
+  secret: "keyboardcat",
+  saveUninitialized: true,
+  cookie: { maxAge: null },
+  resave: false 
+}))
 
 // Define routes
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
+require("./routes")(app);
 
 // Start the server
 const port = 3000;
