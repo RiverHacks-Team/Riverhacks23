@@ -39,7 +39,7 @@ const LandingPage = ({ setUser }) => {
           </div>
         </div>
       </header>
-      <div style={{backgroundColor:'#3aadaa', height:'100px'}} className="loginContents">
+      <div style={{backgroundColor:'#a2d5ac', height:'100px'}} className="loginContents">
         <div
         style={{fontFamily:'Jost',color:'white'}}>Taking care of yourself is an essential part of your college experience, and we're here to support you every step of the way!</div>
         <br></br>
